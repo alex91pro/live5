@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+/*подключение*/
+
+/*Обнуление*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*Переменные--------------------*/
+
+body {
+  color: #000;
+  font-size: 14px;
+  font-family: Source Sans Pro,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  width: 100%;
+  height: 155px;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.top-header__contant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 90px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-header__column:nth-child(1) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.top-header__contacts a {
+  color: #000;
+}
+
+.top-header__callback a {
+  color: #0190a2;
+  border: 1px solid #0190a2;
+  border-radius: 20px;
+  padding: 12px 20px;
+  display: block;
+  margin: 0 0 0 20px;
+}
+
+.contacts-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts-header__phone1 {
+  background: url(../img/phone_top.jpg) left no-repeat;
+  padding: 0 0 0 37px;
+  line-height: 30px;
+  margin: 0 0 6px 0;
+}
+
+.contacts-header__phone2 {
+  background: url(../img/handset.jpg) left no-repeat;
+  padding: 0 0 0 37px;
+  line-height: 30px;
+}
+
+/*=====header-bottom==============*/
+
+.bottom-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #009eb2;
+}
+
+.bottom-header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.menu__icon {
+  display: none;
+}
+
+.menu__list li {
+  position: relative;
+  margin: 0 0 0 20px;
+}
+
+.menu__link {
+  color: #fff;
+  font-size: 15px;
+}
+
+.menu__link::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 90px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu__link:hover {
+  color: yellow;
+}
+
+.menu__sub-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0190a2;
+  padding: 0px;
+  min-width: 200px;
+}
+
+.menu__sub-list > li {
+  margin: 0 0 0px 0;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #8edcf0;
+}
+
+.menu__sub-list li:last-child {
+  border: none;
+}
+
+.menu__sub-list a:hover {
+  color: yellow;
+}
+
+.menu__sub-link {
+  color: #fff;
+}
+
+.menu__sub2-list {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  background-color: #048fa1;
+  padding: 0px;
+  min-width: 150px;
+  border: none;
+}
+
+.menu__sub2-list > li {
+  margin: 5px 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.menu__sub2-link {
+  color: #fff;
+}
+
+.info__body-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__body-list li {
+  color: #fff;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.info__body-list li:hover {
+  color: #ffff85;
+}
+
+/*==============body PC tell========*/
+
+body._pc .menu__list > li:hover .menu__sub-list {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  pointer-events: all;
+}
+
+body._pc .menu__sub-list > li:hover .menu__sub2-list {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  pointer-events: all;
+}
+
+body._pc .menu__arrow::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/*!======экран БОЛЬШЕ 767 пикселей=============================*/
+
+@media (min-width: 767px) {
+  .menu__list > li {
+    padding: 17px 0;
+  }
+
+  .menu__sub-list {
+    -webkit-transform: translate(0px, 10%);
+        -ms-transform: translate(0px, 10%);
+            transform: translate(0px, 10%);
+    /* анимация появления меню*/
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /*исравлят артефакт выпадающ меню с низу*/
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu__sub2-list {
+    -webkit-transform: translate(0px, 10%);
+        -ms-transform: translate(0px, 10%);
+            transform: translate(0px, 10%);
+    /* анимация появления меню*/
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /*исравлят артефакт выпадающ меню с низу*/
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+}
