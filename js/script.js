@@ -33,19 +33,25 @@ if (isMobile.any()) {
       });
     }
   }
-  /*================================================ */
-  //=================================================*/
 } else {
   document.body.classList.add('_pc');
 }
 //!================меню бургер===========================
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
+//*================пробная==============================
+const menusublist  = document.querySelector('.menu__sub-list ');
+const menusub2list = document.querySelector('.menu__sub2-list');
+//*=====================================================
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
     document.body.classList.toggle('_lock');
     iconMenu.classList.toggle('_active');
     menuBody.classList.toggle('_active');
+//*=====================пробная================================
+menusublist.classList.toggle('_active');
+menusub2list.classList.toggle('_active');
+//*=====================================================
   });
 }
 
@@ -66,6 +72,8 @@ if (menuLinks.length > 0) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
+        //menusublist.classList.toggle('_active');
+        //menusub2list.classList.toggle('_active');
       }
       /*---------------------*/
       window.scrollTo({
