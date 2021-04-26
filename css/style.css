@@ -1,156 +1,238 @@
+@charset "UTF-8";
+
 /*подключение*/
 
 /*Обнуление*/
-*{padding: 0;margin: 0;border: 0;}
-*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-nav,footer,header,aside{display: block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
-input,button,textarea{font-family:inherit;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a,a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
-/*Переменные--------------------*/
-$minWidth: 320px;
-$maxWidth: 1400;
-$maxWidthContainer: 1200;
-$md1: $maxWidthContainer + 12;
-$md2: 991.98;
-$md3: 767.98;
-$md4: 479.98;
 
-//ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ==================
-//@import "null";
-body{
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*Переменные--------------------*/
+
+body {
   color: #000;
   font-size: 14px;
   font-family: Source Sans Pro,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
-  &._lock {
-    overflow: hidden;
-  }
 }
-//ОБОЛОЧКА=============
-.wrapper{
-	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
+
+body._lock {
+  overflow: hidden;
 }
-//ОБОЛОЧКА=====================
-//ОСНОВНАЯ СЕТКА===============
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .container {
-  max-width: $maxWidthContainer + px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  
 }
-//======header css==============================//////
-//===================================================
+
 .header {
   width: 100%;
   height: 155px;
 }
-.page{
-  flex: 1 0 auto;
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
+
 .container {
-  max-width: $maxWidthContainer + px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  
 }
-.header-top {
-}
-.top-header {
-		// .top-header__contant всех колумов
-		&__contant {
-      display: flex;
-      min-height: 90px;
-      align-items: center;
-    }
-		// .top-header__column
-		&__column {
-      &:nth-child(1){
-        flex: 1 0 auto;
-      }
-    }
-		// .top-header__logo
-		&__logo {}
-		// .top-header__contacts 
-		&__contacts a{
-      color: #000;
-    }
-		// .top-header__callback
-		&__callback a{
-      color: #0190a2;
-      border: 1px solid #0190a2;
-      border-radius: 20px;
-      padding: 12px 20px;
-      display: block;
-      margin: 0 0 0 20px;
-    }
-    // .top-header____callbackbtn
-    &__callbackbtn{
-    }
-}
-.contacts-header {
-    display: flex;
-    flex-direction: column;
-		// .contacts-header__phone номера телефонов с картинками
-    &__phone1 {
-      background: url(../img/phone_top.jpg) left no-repeat;
-      padding:0 0 0 37px;
-      line-height: 30px;
-      margin: 0 0 6px 0;
-    }
-    &__phone2 {
-    background: url(../img/handset.jpg) left no-repeat;
-    padding:0 0 0 37px;
-    line-height: 30px;
-  }
-}
-/*=====header-bottom==============*/
-.header-bottom {}
-.bottom-header {
+
+.top-header__contant {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  position: fixed;
+  min-height: 90px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-header__column:nth-child(1) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.top-header__contacts a {
+  color: #000;
+}
+
+.top-header__callback a {
+  color: #0190a2;
+  border: 1px solid #0190a2;
+  border-radius: 20px;
+  padding: 12px 20px;
+  display: block;
+  margin: 0 0 0 20px;
+}
+
+.contacts-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts-header__phone1 {
+  background: url(../img/phone_top.jpg) left no-repeat;
+  padding: 0 0 0 37px;
+  line-height: 30px;
+  margin: 0 0 6px 0;
+}
+
+.contacts-header__phone2 {
+  background: url(../img/handset.jpg) left no-repeat;
+  padding: 0 0 0 37px;
+  line-height: 30px;
+}
+
+/*=====header-bottom==============*/
+
+.bottom-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 90px;
   left: 0;
   height: 50px;
   width: 100%;
   background-color: #009eb2;
 }
+
 .bottom-header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
-.bottom-header__column {
-}
-.menu {}
 .menu__icon {
   display: none;
 }
-.menu__list {
-}
-.menu__list li{
+
+.menu__list li {
   position: relative;
   margin: 0 0 0 20px;
 }
+
 .menu__link {
   color: #fff;
   font-size: 15px;
 }
-.menu__link::after{
+
+.menu__link::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -160,37 +242,43 @@ body{
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
-.menu__link:hover{
+
+.menu__link:hover {
   color: yellow;
 }
+
 .menu__sub-list {
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #0190a2;
   padding: 0px;
-  min-width: 200px; 
+  min-width: 200px;
 }
-.menu__sub-list > li{
+
+.menu__sub-list > li {
   margin: 0 0 0px 0;
   padding: 10px 10px;
   cursor: pointer;
-  border-bottom: 1px solid rgb(142, 220, 240); 
+  border-bottom: 1px solid #8edcf0;
 }
-.menu__sub-list li:last-child{
+
+.menu__sub-list li:last-child {
   border: none;
 }
-.menu__sub-list a:hover{
+
+.menu__sub-list a:hover {
   color: yellow;
 }
+
 .menu__sub-link {
   color: #fff;
 }
-.menu__arrow {
-  //display: none;//стрелка в суб меню
-}
+
 .menu__sub2-list {
   position: absolute;
   top: 0px;
@@ -200,53 +288,68 @@ body{
   min-width: 150px;
   border: none;
 }
-.menu__sub2-list > li{
+
+.menu__sub2-list > li {
   margin: 5px 5px;
   padding: 10px 10px;
-  cursor: pointer; 
+  cursor: pointer;
 }
+
 .menu__sub2-link {
   color: #fff;
 }
-//==============bottom header=========
+
 .bottom-header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.info {}
-.info__body {}
+
 .info__body-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .info__body-list li {
   color: #fff;
   padding: 0 16px;
   cursor: pointer;
 }
-.info__body-link {
+
+.info__body-list li:hover {
+  color: #ffff85;
 }
-.info__body-list li:hover{
-  color: rgb(255, 255, 133);
-}
+
 .search {
   border-left: 1px solid #fff;
   padding-left: 7px;
 }
+
 /*==============body PC tell========*/
-body._pc .menu__list > li:hover .menu__sub-list{
+
+body._pc .menu__list > li:hover .menu__sub-list {
   opacity: 1;
   visibility: visible;
-  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
   pointer-events: all;
 }
-body._pc .menu__sub-list > li:hover .menu__sub2-list{
+
+body._pc .menu__sub-list > li:hover .menu__sub2-list {
   opacity: 1;
   visibility: visible;
-  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
   pointer-events: all;
 }
-//стрелка суб меню
-body._pc .menu__arrow::before{
+
+body._pc .menu__arrow::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -257,29 +360,45 @@ body._pc .menu__arrow::before{
   display: inline-block;
   padding: 3px;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg); transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
+
 body._touch .menu__sub-list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-body._touch .menu__sub2-link{
-  flex: 1 1 auto;
+
+body._touch .menu__sub2-link {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
+
 body._touch .menu__arrow {
   display: block;
   width: 0px;
   height: 0px;
   margin: 0 0 0 5px;
+  -webkit-transition: -webkit-transform 0.3 ease 0s;
+  transition: -webkit-transform 0.3 ease 0s;
+  -o-transition: transform 0.3 ease 0s;
   transition: transform 0.3 ease 0s;
-  border-left: 5px solid transparent; /*стрелка */
+  transition: transform 0.3 ease 0s, -webkit-transform 0.3 ease 0s;
+  border-left: 5px solid transparent;
+  /*стрелка */
   border-right: 5px solid transparent;
   border-top: 10px solid #fff;
 }
+
 /*======в режиме тач пада открытие и закрытие стрелки ======*/
-body._touch .menu__sub-list > li .menu__sub2-list._active{
+
+body._touch .menu__sub-list > li .menu__sub2-list._active {
   display: none;
 }
-body._touch .menu__sub-list > li._active .menu__sub2-list{
+
+body._touch .menu__sub-list > li._active .menu__sub2-list {
   display: block;
   position: relative;
   left: -42px;
@@ -288,61 +407,184 @@ body._touch .menu__sub-list > li._active .menu__sub2-list{
   opacity: 1;
   visibility: visible;
 }
+
 /*=======переворот стрелки тачпад=========================*/
-body._touch .menu__sub-list > li._active .menu__arrow{
-  transform: rotate(-90deg);
+
+body._touch .menu__sub-list > li._active .menu__arrow {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
-//=======экран Меньше 1000 пикселей ============================
-@media (max-width: 1000px){
+
+/*!======экран БОЛЬШЕ 930 пикселей=============================*/
+
+.footer-top {
+  position: relative;
+}
+
+.top-footer {
+  background-color: #0190a2;
+  color: #fff;
+  height: 260px;
+}
+
+.top-footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-footer__column {
+  margin-top: 10px;
+}
+
+.info1__body-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.info1__body-list li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.info1__body-list li:hover {
+  color: #ffff85;
+}
+
+.contacts-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts-footer__phone1 {
+  background: url(../img/telfooter.jpg) left no-repeat;
+  padding: 0 0 0 37px;
+  line-height: 30px;
+  margin: 0 0 6px 0;
+  color: #fff;
+}
+
+.contacts-footer__phone2 {
+  background: url(../img/phonefooter.jpg) left no-repeat;
+  padding: 0 0 0 37px;
+  line-height: 30px;
+  margin: 0 0 7px 0;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.top-footer__hourswork {
+  line-height: 25px;
+}
+
+.social__icon {
+  margin: 15px auto;
+  cursor: pointer;
+}
+
+.top-footer__callback a {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding: 12px 20px;
+  display: block;
+  margin: 0 0 0 20px;
+  text-align: center;
+}
+
+.bottom-footer__2021 {
+  height: 25px;
+  color: #fff;
+  background-color: #008192;
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.e2021 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 930px) {
+  .menu__list > li {
+    padding: 17px 0;
+  }
+
+  .menu__sub-list {
+    -webkit-transform: translate(0px, 10%);
+        -ms-transform: translate(0px, 10%);
+            transform: translate(0px, 10%);
+    /* анимация появления меню*/
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /*исравлят артефакт выпадающ меню с низу*/
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu__sub2-list {
+    -webkit-transform: translate(0px, 10%);
+        -ms-transform: translate(0px, 10%);
+            transform: translate(0px, 10%);
+    /* анимация появления меню*/
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /*исравлят артефакт выпадающ меню с низу*/
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+@media (max-width: 1000px) {
   .info__body-list li {
     color: #fff;
     padding: 0 10px;
     cursor: pointer;
   }
 }
-@media (max-width: 900px){
-  .info__body-list li {
-    color: #fff;
-    padding: 0 8px;
-    cursor: pointer;
+
+@media (max-width: 930px) {
+  .top-header {
+    border-bottom: 1px solid #e7f2f3;
   }
-}
-/*!======экран БОЛЬШЕ 930 пикселей=============================*/
-@media (min-width: 930px){
-  .menu__list > li{
-    padding: 17px 0;
-  }
-  .menu__sub-list {
-    transform: translate(0px, 10%); /* анимация появления меню*/
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none; /*исравлят артефакт выпадающ меню с низу*/
-    transition: all 0.3s ease 0s;
-  }
-  .menu__sub2-list {
-    transform: translate(0px, 10%); /* анимация появления меню*/
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none; /*исравлят артефакт выпадающ меню с низу*/
-    transition: all 0.3s ease 0s;
-  }
-}
-//======экран меньше 930 пикселей=======
-@media (max-width: 930px){
-  .top-header{
-   // position: relative;
-  border-bottom: 1px solid #e7f2f3;
-  }
-  .contacts-header{
+
+  .contacts-header {
     margin-right: 40px;
   }
-  .bottom-header{
+
+  .bottom-header {
     left: -100%;
   }
-  .info__body{
+
+  .info__body {
     display: none;
   }
-  .menu__icon{
+
+  .menu__icon {
     z-index: 5;
     display: block;
     position: absolute;
@@ -352,9 +594,11 @@ body._touch .menu__sub-list > li._active .menu__arrow{
     top: 34px;
     right: 10px;
   }
+
   .top-header__callback a {
     display: none;
   }
+
   .menu__icon span,
   .menu__icon::before,
   .menu__icon::after {
@@ -362,89 +606,176 @@ body._touch .menu__sub-list > li._active .menu__arrow{
     position: absolute;
     height: 10%;
     width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background-color: rgb(248, 8, 8);
+    background-color: #f80808;
   }
+
   .menu__icon::before,
   .menu__icon::after {
     content: '';
   }
-  .menu__icon::before{
+
+  .menu__icon::before {
     top: 0px;
   }
-  .menu__icon::after{
+
+  .menu__icon::after {
     bottom: 0;
   }
-  .menu__icon span{
+
+  .menu__icon span {
     top: 50%;
-    transform: scale(1) translate(0px,-50%);
+    -webkit-transform: scale(1) translate(0px, -50%);
+        -ms-transform: scale(1) translate(0px, -50%);
+            transform: scale(1) translate(0px, -50%);
   }
-  //=========бургер крестик============
-  .menu__icon._active{
+
+  .menu__icon._active {
     position: absolute;
     top: 40px;
     left: 30px;
   }
-  .menu__icon._active span{
+
+  .menu__icon._active span {
     display: none;
   }
-  .menu__icon._active::before{
+
+  .menu__icon._active::before {
     top: 50%;
-    transform: rotate(-45deg) translate(0px, -50%);
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+        -ms-transform: rotate(-45deg) translate(0px, -50%);
+            transform: rotate(-45deg) translate(0px, -50%);
   }
-  .menu__icon._active::after{ 
+
+  .menu__icon._active::after {
     bottom: 50%;
-    transform: rotate(45deg) translate(0px, 50%);
+    -webkit-transform: rotate(45deg) translate(0px, 50%);
+        -ms-transform: rotate(45deg) translate(0px, 50%);
+            transform: rotate(45deg) translate(0px, 50%);
   }
-//----------------------//
-.menu__body {
-  position: fixed;
-  top: 0;
-  left: -100%; /*чтобы менювыскакивала правильно*/
-  width: 100%;
-  height: 100%;
-  background-color: rgba(39, 35, 35, 0.9);
-  padding: 100px 30px 30px 30px;
-  transition: left 0.3s ease 0s;
-  overflow: auto;
-}
-.menu__body._active{
-  left: 0; /*чтобы менювыскакивала правильно*/
-}
-//---------------------------------------//
 
-//==удаление слово каталог + ACTive menu-------
-.menu__link{
-  display: none;
-}
-//=====в тачскрине скрывает суб2 меню=====
-.menu__sub2-list {
-  transform: translate(0px, 10%); /* анимация появления меню*/
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none; /*исравлят артефакт выпадающ меню с низу*/
-  transition: all 0.3s ease 0s;
-}
-.menu__sub-list._active {
-  position: fixed;
-  top: 0px;
-  left: 60px;
-  height: 900px;
-  
-}
-.menu__sub-list._active li{
-  font-size: 16px;
-  padding: 15px 10px;
-}
-.menu__sub2-list._active {
-  display: none;
-}
-.menu__sub2-list._active {
-  position: relative;
-  display: block;
-  top: 0;
-  left: 0;
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /*чтобы менювыскакивала правильно*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(39, 35, 35, 0.9);
+    padding: 100px 30px 30px 30px;
+    -webkit-transition: left 0.3s ease 0s;
+    -o-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+  }
+
+  .menu__body._active {
+    left: 0;
+    /*чтобы менювыскакивала правильно*/
+  }
+
+  .menu__link {
+    display: none;
+  }
+
+  .menu__sub2-list {
+    -webkit-transform: translate(0px, 10%);
+        -ms-transform: translate(0px, 10%);
+            transform: translate(0px, 10%);
+    /* анимация появления меню*/
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /*исравлят артефакт выпадающ меню с низу*/
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu__sub-list._active {
+    position: fixed;
+    top: 0px;
+    left: 60px;
+    height: 900px;
+  }
+
+  .menu__sub-list._active li {
+    font-size: 16px;
+    padding: 15px 10px;
+  }
+
+  .menu__sub2-list._active {
+    display: none;
+  }
+
+  .menu__sub2-list._active {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+
+  .top-footer__logo {
+    display: none;
+  }
 }
 
+@media (max-width: 900px) {
+  .info__body-list li {
+    color: #fff;
+    padding: 0 8px;
+    cursor: pointer;
+  }
+}
 
+@media (max-width: 700px) {
+  .top-footer__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .info1__body-list {
+    display: none;
+  }
+
+  .top-footer__telinfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .contacts-footer {
+    margin-right: 50px;
+  }
+
+  .top-footer {
+    background-color: #0190a2;
+    color: #fff;
+    height: 290px;
+  }
+
+  .top-footer__social {
+    text-align: center;
+  }
+
+  .top-header__callbackbtn {
+    width: 200px;
+  }
+
+  .top-footer__callback a {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
